@@ -7,10 +7,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /backend/app
 
 # Copy requirements ONLY first (to use Docker cache)
-COPY requirements.txt .
+COPY /backend/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Ensure Python can find the /app folder
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/backend/app
 ENV PYTHONUNBUFFERED=1
 
 # Command to start backend
