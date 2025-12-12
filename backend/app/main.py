@@ -13,13 +13,14 @@ app = FastAPI(title="Org Management Student-style")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://the-wedding-company-assignment-back.vercel.app/",
+        "https://the-wedding-company-assignment-back.vercel.app",
         "http://localhost:5173"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # Routers
