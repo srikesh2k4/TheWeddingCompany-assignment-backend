@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor configs
+.vscode/
+.idea/
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# PyTest / Coverage / Reports
+.coverage
+htmlcov/
+.cache/
+pytest_cache/
+
+# Uvicorn / FastAPI logs
+*.log
+
+# Mongo dumps / exports
+dump/
+*.bson
+*.json
+
+# Build / Packaging
+build/
+dist/
+
+# Docker
+docker-data/
+*.pid
